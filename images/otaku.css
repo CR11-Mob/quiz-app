@@ -1,0 +1,489 @@
+/************** FONT FACE ***************/
+
+@font-face {
+  font-family: pencilPete;
+  src: url(./fonts/pencilpete_font/PPETRIAL.otf);
+}
+
+@font-face {
+  font-family: perspective;
+  src: url(./fonts/pwperspective/PWPerspective.ttf);
+}
+@font-face {
+  font-family: fredericka-the-great;
+  src: url(./fonts/fredericka-the-great/FrederickatheGreat-Regular.ttf);
+}
+
+@font-face {
+  font-family: flunkies-bb;
+  src: url(./fonts/flunkies-bb/FlunkiesBB.otf);
+}
+
+@font-face {
+  font-family: sf-cartoonist-hand;
+  src: url(./fonts/sf-cartoonist-hand/TrueType/SFCartoonistHand-BoldItalic.ttf);
+}
+
+/********** TAG SELECTOR'S **********/
+
+* {
+  box-sizing: border-box;
+  border: 1px solid red;
+}
+
+body {
+  margin: 0px;
+  padding: 0%;
+  font-family: "Comic Neue", cursive;
+  font-family: "Lobster", cursive;
+  font-family: pencilPete;
+  background: url("/images/page-texture-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: center; */
+}
+
+h1 {
+  font-family: pencilPete;
+  font-size: 3rem;
+  margin: 0px;
+}
+h3 {
+  margin: 0px;
+}
+/*************** ID SELECTOR'S **************/
+
+#otaku-container {
+  display: flex;
+  /* flex-direction: column; */
+  height: 100vh;
+  width: 100%;
+  background: url("/images/page-texture-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/********** HINT PAGE SECTION **********/
+
+#heading-and-hint-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  background: radial-gradient(
+    circle at 20%,
+    rgb(255, 255, 255),
+    rgba(110, 110, 110, 0.4)
+  );
+}
+
+#heading-and-hint-section div {
+  display: flex;
+  height: 7.15%;
+  width: 100%;
+  border-bottom: 1.3px solid rgba(0, 0, 0, 0.5);
+}
+
+#heading-div {
+  justify-content: center;
+  align-items: center;
+}
+
+#hint-counter {
+  justify-content: center;
+  align-items: center;
+  font-family: pencilPete;
+  font-size: 1.1rem;
+}
+
+/* #hint-btn-div {
+  justify-content: center;
+  text-align: center;
+} */
+
+#hint-btn {
+  display: flex;
+  font-family: perspective;
+  font-size: 2rem;
+  font-weight: 600;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  margin: 0px;
+  margin-left: 26%;
+}
+
+#hint-btn div {
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 7%;
+}
+
+#add-time-div {
+  height: 100% !important;
+  width: 25% !important;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: perspective;
+  border: none !important;
+}
+
+#hint-line-1 p {
+  display: flex;
+  font-size: 1.5rem;
+  margin: 0px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 9px;
+}
+
+#hint-line-2 p {
+  display: flex;
+  font-size: 1.5rem;
+  margin: 0px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 9px;
+}
+
+#hint-line-3 p {
+  display: flex;
+  font-size: 1.5rem;
+  margin: 0px;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  top: 9px;
+}
+
+/********** QUESTION PAGE SECTION **********/
+
+#progressBar-and-question-section {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  background: radial-gradient(
+    circle at 20%,
+    rgb(255, 255, 255),
+    rgba(110, 110, 110, 0.4)
+  );
+}
+
+#progressBar-and-question-section div {
+  display: flex;
+  height: 7.15%;
+  width: 100%;
+  border-bottom: 1.3px solid rgba(0, 0, 0, 0.5);
+}
+
+#question-counter {
+  /* justify-content: center;
+  align-items: center; */
+  display: flex !important;
+  flex-direction: column;
+  font-family: pencilPete;
+  font-size: 1.1rem;
+}
+
+#qcounter-heading {
+  display: flex;
+  height: 75%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#time-interval-bar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 25% !important;
+  width: 0px;
+  border: none;
+  background-image: url("/images/interval-time-img3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#question-line1 {
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+#question-line1 p {
+  display: flex;
+  margin: 0px;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  position: relative;
+  top: 9px;
+}
+
+#question-line2 {
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+#question-line2 p {
+  display: flex;
+  margin: 0px;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  position: relative;
+  top: 9px;
+}
+
+#optionA-B div {
+  font-size: 1.5rem;
+  border: none !important;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100% !important;
+  width: 50% !important;
+  position: relative;
+  top: 9px;
+}
+
+#optionA-B span:hover {
+  background-image: url("/images/option-underline-img1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+#optionC-D div {
+  font-size: 1.5rem;
+  border: none !important;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100% !important;
+  width: 50% !important;
+  position: relative;
+  top: 9px;
+}
+
+#optionC-D span:hover {
+  background-image: url("/images/option-underline-img1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+/********** CLASS SELECTOR'S **********/
+
+.btn-disable {
+  cursor: not-allowed;
+  pointer-events: none;
+
+  /* color: #a1a1a1; */
+  /* background-color: #ffffff; */
+}
+
+.hide-text {
+  display: none;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+.fade-out {
+  animation-name: fadeOut;
+  animation-duration: 2s;
+}
+
+.fade-in-left {
+  animation-name: fadeLeft;
+  animation-duration: 2s;
+}
+
+.fade-out-left {
+  animation-name: fadeOutLeft;
+  animation-duration: 2s;
+}
+
+/********** ANIMATION **********/
+
+@keyframes pulse {
+  25% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeOutLeft {
+  0% {
+    opacity: 1;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+}
+
+/********** CHEAT PAPER **********/
+
+.cheat {
+  display: none;
+  background-image: url("/images/cheat-img.png");
+  background-repeat: no-repeat;
+}
+
+/*************** RESULT SECTION ***************/
+
+/********** ID'S **********/
+#content {
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+}
+
+#heading {
+  height: 15%;
+  width: 100%;
+}
+
+#marks {
+  height: 75%;
+  width: 100%;
+}
+
+#report-card {
+  height: 10%;
+  width: 100%;
+}
+/********** CLASSES **********/
+/* The Modal (background) */
+.modal {
+  display: block; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 1.5%; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  /* background-color: whitesmoke; */
+  background-image: url("/images/img6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+}
+
+.modal-body {
+  padding: 2px 16px;
+}
+
+.modal-footer {
+  padding: 2px 16px;
+}

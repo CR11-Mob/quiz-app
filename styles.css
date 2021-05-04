@@ -1,0 +1,263 @@
+/************** FONT FACE ***************/
+
+@font-face {
+  font-family: pencilPete;
+  src: url(./fonts/pencilpete_font/PPETRIAL.otf);
+}
+
+@font-face {
+  font-family: perspective;
+  src: url(./fonts/pwperspective/PWPerspective.ttf);
+}
+@font-face {
+  font-family: fredericka-the-great;
+  src: url(./fonts/fredericka-the-great/FrederickatheGreat-Regular.ttf);
+}
+
+@font-face {
+  font-family: flunkies-bb;
+  src: url(./fonts/flunkies-bb/FlunkiesBB.otf);
+}
+
+@font-face {
+  font-family: sf-cartoonist-hand;
+  src: url(./fonts/sf-cartoonist-hand/TrueType/SFCartoonistHand-BoldItalic.ttf);
+}
+
+/********** TAG SELECTOR'S **********/
+
+* {
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+body {
+  margin: 0px;
+  padding: 0%;
+  font-family: "Comic Neue", cursive;
+  font-family: "Lobster", cursive;
+  /* background: url("/images/page-texture-3.jpg");
+  background-repeat: no-repeat;
+  background-size: contain; */
+  /* background-position: center; */
+}
+
+h1 {
+  font-family: pencilPete;
+  font-size: 3rem;
+}
+a {
+  text-decoration: none !important;
+}
+
+/*************** INDEX PAGE CSS ***************/
+
+/********** ID SELECTOR'S *********/
+
+#container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background: url("/images/page-texture-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(
+    circle at 20%,
+    rgb(255, 255, 255),
+    rgba(110, 110, 110, 0.4)
+  );
+}
+
+#hero div {
+  display: flex;
+  height: 100% !important;
+  width: 100%;
+  border-bottom: 1.3px solid rgba(0, 0, 0, 0.5);
+  padding: 0%;
+  margin: 0%;
+}
+
+#hero-heading {
+  display: inline;
+  position: absolute;
+  left: 12%;
+  top: 16%;
+  /* margin: 0px; */
+}
+
+#quick-quizz-btn {
+  font-family: perspective;
+  font-size: 1.5rem;
+  font-weight: 600;
+  position: absolute;
+  left: 23%;
+  top: 39%;
+  display: flex;
+}
+
+/*************** OTAKU PAGE CSS ***************/
+
+/********** ID SELECTOR'S **********/
+
+#otaku-container {
+  display: flex;
+  flex-direction: column;
+  height: 120vh;
+  width: 100%;
+}
+
+#heading {
+  height: 10%;
+  width: 100%;
+}
+
+#question-bar-hint-counter {
+  display: flex;
+  height: 10%;
+  width: 100%;
+}
+
+#question-counter {
+  height: 100%;
+  width: 20%;
+}
+
+#progress-bar {
+  height: 100%;
+  width: 60%;
+}
+
+#hint-counter {
+  height: 100%;
+  width: 20%;
+}
+
+#main-section {
+  height: 80%;
+  width: 100%;
+}
+
+#main-question {
+  height: 20%;
+  width: 100%;
+}
+
+#main-options {
+  display: flex;
+  flex-wrap: wrap;
+  height: 80%;
+  width: 100%;
+}
+
+#optionA {
+  height: 50%;
+  width: 50%;
+}
+#optionB {
+  height: 50%;
+  width: 50%;
+}
+#optionC {
+  height: 50%;
+  width: 50%;
+}
+#optionD {
+  height: 50%;
+  width: 50%;
+}
+
+#hint-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+  width: 100%;
+}
+
+#hint-text {
+  text-align: center;
+  height: 100%;
+  width: 100%;
+}
+
+#hint-btn:hover {
+  animation-name: pulse;
+  animation-duration: 0.7s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+}
+
+/********** CLASS SELECTOR'S **********/
+
+.button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.btn-disable {
+  cursor: not-allowed;
+  pointer-events: none;
+
+  color: #707070;
+  background-color: #ffffff;
+}
+
+.hide-btn {
+  display: none;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+}
+
+.fade-out {
+  animation-name: fadeOut;
+  animation-duration: 1s;
+}
+
+/********** ANIMATION **********/
+
+@keyframes pulse {
+  25% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
