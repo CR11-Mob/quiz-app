@@ -285,6 +285,8 @@ let renderQues = () => {
     console.log("Clear Render interval:", index);
     console.log("You have answer all question!");
 
+    let copyShuffleQuesArr = [...shuffleQuesArr];
+
     document.getElementById("heading-and-hint-section").style.display = "none";
     document.getElementById("progressBar-and-question-section").style.display =
       "none";
@@ -316,35 +318,41 @@ let renderQues = () => {
 
     document.getElementById("otaku-container").appendChild(finalResul);
 
-    // const modal = document.createElement("div");
-    // modal.id = "my-modal";
-    // modal.className = "modal";
+    let rowLineDivs = rowLines.querySelectorAll("div");
 
-    // const modalContent = document.createElement("div");
-    // modalContent.id = "content";
-    // modalContent.className = "modal-content";
+    // console.log(rowLineDivs);
+    let renderQuestions = () => {
+      let j = 0;
+      for (let i = 0; i < rowLineDivs.length; i = i + 2) {
+        rowLineDivs[
+          i
+        ].innerHTML = `<span style = "height:100%; width:10%; padding-left:8px;">Q.${
+          j + 1
+        }</span><p>${copyShuffleQuesArr[j].question}</p>`;
+        // i += 1;
+        j++;
+      }
+    };
+    renderQuestions();
 
-    // const modalHeader = document.createElement("div");
-    // modalHeader.id = "heading";
-    // modalHeader.className = "modal-header";
+    let renderAnswers = () => {
+      let j = 0;
+      for (let i = 1; i < rowLineDivs.length; i = i + 2) {
+        rowLineDivs[
+          i
+        ].innerHTML = `<span style = "height:100%; width:10%; padding-left:8px;">AnS:</span><p>${copyShuffleQuesArr[j].answer}</p>`;
+        // i += 1;
+        j++;
+      }
+    };
+    renderAnswers();
 
-    // modalHeader.innerHTML = `<h3>Final-Result</h3>`;
+    // document.getElementById(
+    //   "row-line-1"
+    // ).innerHTML = `<span style = "height:100%; width:10%; padding-left:8px;">Q.1</span><p>${copyShuffleQuesArr[0].question}</p>`;
 
-    // const modalBody = document.createElement("div");
-    // modalBody.id = "marks";
-    // modalBody.className = "modal-body";
-
-    // const modalFooter = document.createElement("div");
-    // modalFooter.id = "report-card";
-    // modalFooter.className = "modal-footer";
-
-    // modalContent.append(modalHeader, modalBody, modalFooter);
-
-    // modal.appendChild(modalContent);
-
-    // document.getElementById("otaku-container").appendChild(modal);
-
-    console.log("Your total marks is:", mark);
+    // console.log("Your total marks is:", mark);
+    // console.log("Copy array:", JSON.stringify(copyShuffleQuesArr));
   } else {
     hintCounter.innerHTML = `<h3><span style = "font-family:perspective;">H</span></span><span style = "font-family:fredericka-the-great; font-weight:500">int</span> <span style = "font-family: perspective;font-weight: 600;">${count}/3</span></h3> `;
 

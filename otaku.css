@@ -28,7 +28,7 @@
 
 * {
   box-sizing: border-box;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 body {
@@ -49,6 +49,11 @@ h1 {
 }
 h3 {
   margin: 0px;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
 }
 /*************** ID SELECTOR'S **************/
 
@@ -390,27 +395,6 @@ h3 {
 
 /********** ID'S **********/
 
-/* #content {
-  display: flex;
-  flex-direction: column;
-  height: 95vh;
-}
-
-#heading {
-  height: 15%;
-  width: 100%;
-}
-
-#marks {
-  height: 75%;
-  width: 100%;
-}
-
-#report-card {
-  height: 10%;
-  width: 100%;
-} */
-
 #final-result {
   display: flex;
   flex-direction: row;
@@ -448,12 +432,33 @@ h3 {
 }
 
 #row-lines div {
+  display: flex;
+  /* flex-direction: column; */
   height: 5%;
   width: 100%;
   border: 1px solid rgb(152, 195, 237);
   border-left: none;
   border-right: none;
+  /* justify-content: center; */
+  align-items: center;
 }
+
+#row-lines p {
+  margin-left: 4px;
+  /* margin: auto; */
+  /* margin-left: 2px; */
+  height: 100%;
+  width: 78%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+/* #row-lines p:hover {
+  overflow: visible;
+} */
 
 #right-red-line {
   height: 100%;
