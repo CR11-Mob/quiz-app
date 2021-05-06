@@ -72,7 +72,7 @@ export const questionArray = [
   {
     question: "Who is Kira in Death Note?",
     options: ["Light Yagami", "Ichigami Senku", "L", "Watari"],
-    answer: "William Vangeance",
+    answer: "Light Yagami",
     hint:
       "Lorem ipsum HINT NO.8 dolor sit amet consectetur adipiscing elit est sociosqu risus, ut consequat accumsan dictumst libero fames pellentesque commodo non.",
   },
