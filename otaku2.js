@@ -46,6 +46,7 @@ console.log(shuffleQuesArr);
 
 /*************** VARIABLE'S  **************/
 
+let optionInputArr = [];
 let index = 0;
 let count = 0;
 let mark = 0;
@@ -116,6 +117,9 @@ valueInterval = setInterval(intervalBar, 1000);
 
 let startInterval = () => {
   interval = setInterval(() => {
+    optionInputArr.push("Not Attempted.");
+    console.log(optionInputArr);
+
     index++;
     quesLine1 = "";
     quesLine2 = "";
@@ -165,10 +169,19 @@ let checkAns = () => {
 
     endInterval();
 
+    optionInputArr.push(shuffleQuesArr[index].options[0]);
+    console.log(optionInputArr);
+
     let result =
       shuffleQuesArr[index].options[0] === shuffleQuesArr[index].answer
         ? correctAns()
         : wrongAns();
+
+    // let booleanValue = (shuffleQuesArr[index]["boolean"] = result);
+    // shuffleQuesArr.push(booleanValue);
+    // console.log(JSON.stringify(shuffleQuesArr));
+    // console.log((shuffleQuesArr[index]["boolean"] = result));
+    // console.log("result log:", result);
   });
 
   optionB.addEventListener("click", () => {
@@ -185,6 +198,9 @@ let checkAns = () => {
     hintLine3 = "";
 
     endInterval();
+
+    optionInputArr.push(shuffleQuesArr[index].options[1]);
+    console.log(optionInputArr);
 
     let result =
       shuffleQuesArr[index].options[1] === shuffleQuesArr[index].answer
@@ -207,6 +223,9 @@ let checkAns = () => {
 
     endInterval();
 
+    optionInputArr.push(shuffleQuesArr[index].options[2]);
+    console.log(optionInputArr);
+
     let result =
       shuffleQuesArr[index].options[2] === shuffleQuesArr[index].answer
         ? correctAns()
@@ -227,6 +246,9 @@ let checkAns = () => {
     hintLine3 = "";
 
     endInterval();
+
+    optionInputArr.push(shuffleQuesArr[index].options[3]);
+    console.log(optionInputArr);
 
     let result =
       shuffleQuesArr[index].options[3] === shuffleQuesArr[index].answer
@@ -287,6 +309,8 @@ let renderQues = () => {
 
     let copyShuffleQuesArr = [...shuffleQuesArr];
 
+    console.log("Copy Array:", copyShuffleQuesArr);
+
     document.getElementById("heading-and-hint-section").style.display = "none";
     document.getElementById("progressBar-and-question-section").style.display =
       "none";
@@ -340,8 +364,26 @@ let renderQues = () => {
       for (let i = 1; i < rowLineDivs.length; i = i + 2) {
         rowLineDivs[
           i
-        ].innerHTML = `<span style = "height:100%; width:10%; padding-left:8px;">AnS:</span><p>${copyShuffleQuesArr[j].answer}</p>`;
-        // i += 1;
+        ].innerHTML = `<span style = "height:100%; width:10%; padding-left:8px;">AnS:</span><p>${
+          optionInputArr[j]
+        }</p><span id = "user-ans-${
+          j + 1
+        }" style = "height:100%; width:10%; padding-left:8px;"></span>`;
+        let userAns = document.getElementById(`user-ans-${j + 1}`);
+        console.log("user ans:", userAns);
+        if (copyShuffleQuesArr[j].boolean === true) {
+          userAns.style.backgroundImage = "url('/images/correct3.png')";
+          userAns.style.backgroundRepeat = "no-repeat";
+          userAns.style.backgroundSize = "contain";
+        } else if (copyShuffleQuesArr[j].boolean === undefined) {
+          userAns.style.backgroundImage = "url('/images/Zero-1.png')";
+          userAns.style.backgroundRepeat = "no-repeat";
+          userAns.style.backgroundSize = "contain";
+        } else {
+          userAns.style.backgroundImage = "url('/images/Wrong3.png')";
+          userAns.style.backgroundRepeat = "no-repeat";
+          userAns.style.backgroundSize = "contain";
+        }
         j++;
       }
     };
@@ -404,6 +446,8 @@ renderQues();
 
 const correctAns = () => {
   mark += 10;
+  shuffleQuesArr[index]["boolean"] = true;
+  // console.log(shuffleQuesArr[index].answer);
   index++;
   console.log(" You get " + mark + " marks");
   valueInterval = setInterval(intervalBar, 1000);
@@ -415,6 +459,7 @@ const correctAns = () => {
 };
 
 const wrongAns = () => {
+  shuffleQuesArr[index]["boolean"] = false;
   index++;
   console.log(" You Are Wrong! ");
   valueInterval = setInterval(intervalBar, 1000);
