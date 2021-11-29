@@ -1,4 +1,4 @@
-import { questionArray } from "/questions.js";
+import { questionArray } from "questions.js";
 
 // console.log(questionArray);
 
